@@ -8,7 +8,7 @@ const app = express();
 
 // 中间件配置
 app.use(cors({
-  origin: 'http://localhost:5173', // 只允许本地前端开发服务器访问
+  origin: '*',  // 在 Vercel 环境中允许所有来源
   methods: ['GET', 'POST'],
   credentials: true
 }));

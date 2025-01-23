@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-// 改回本地开发地址
-const API_BASE_URL = 'http://localhost:3000/api'
+// 使用相对路径，这样会自动使用当前域名
+const API_BASE_URL = '/api'
 
 export const getTodos = async () => {
   const response = await axios.get(`${API_BASE_URL}/get-todo`)
